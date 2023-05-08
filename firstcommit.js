@@ -73,12 +73,76 @@
 
 
 
-let odd=document.querySelectorAll('li:nth-child(odd)')
-let item= document.querySelectorAll('.list-group-item:nth-child(2')
+// let odd=document.querySelectorAll('li:nth-child(odd)')
+// let item= document.querySelectorAll('.list-group-item:nth-child(2')
 
-for(let i=0;i<odd.length;i++){
-    odd[i].style.backgroundColor="green"
-    item[i].style.color='green'
-}
+// for(let i=0;i<odd.length;i++){
+//     odd[i].style.backgroundColor="green"
+//     item[i].style.color='green'
+// }
+
+//parrentNode
+let item=document.querySelector('#items')
+// console.log(item.parentNode);
+// item.parentNode.style.backgroundColor='#f4f4f4'
+// console.log(item.parentNode.parentNode);
+
+//parrentelement
+// console.log(item.parentElement);
+// item.parentElement.style.backgroundColor='#f4f4f4'
+// console.log(item.parentElement.parentElement);
+
+//childnode
+// console.log(item.childNodes);
+// console.log(item.children);
+// console.log(item.children[2]);
+// item.children[0].style.color='red'
+
+// console.log(item.firstChild);
+
+// console.log(item.firstElementChild);
+// item.firstElementChild.style.color='blue'
+// console.log(item.lastElementChild);
+// item.lastElementChild.style.color='yellow'
+
+
+//sibling
+
+// console.log(item.nextSibling);
+// console.log(item.nextElementSibling);
+
+// console.log(item.previousSibling);
+// console.log(item.previousElementSibling);
+// item.previousElementSibling.style.color='green'
+
+//creat
+let newDiv=document.createElement('div')
+newDiv.className='hello'
+newDiv.id='hello1'
+newDiv.setAttribute('title','text')
+let txt=document.createTextNode('hello world')
+newDiv.appendChild(txt)
+newDiv.style.fontSize='30px'
+console.log(newDiv);
+
+let container=document.querySelector('header .container')
+let h1=document.querySelector('header h1')
+
+container.insertBefore(newDiv,h1)
+
+let parentnode=document.getElementById('items');
+let node=document.createElement('li');
+node.className='node1'
+let ntxt=document.createTextNode('hello world')
+node.appendChild(ntxt)
+
+parentnode.innerHTML=node.innerHTML+parentnode.innerHTML
+
+
+ console.log(parentnode.innerHTML);
+
+
+
+
 
 
