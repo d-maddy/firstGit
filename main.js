@@ -1,8 +1,17 @@
+// const ul=document.querySelector('.items');
+//  ul.remove();
+//  ul.lastElementChild.remove();
+
+// ul.firstElementChild.textContent='Hello';
+// ul.children[1].innerText='brad';
+// ul.lastElementChild.innerHTML="<h1>Hello</h1>";
+// ul.children[0].style.color='green';
+// ul.children[1].style.color='yellow';
 const btn=document.querySelector('.btn');
 const myForn=document.querySelector('#my-form');
 const nameInput=document.querySelector('#name');
 const emailInput=document.querySelector('#email');
-const msg=document.querySelector('.msg');
+const msg=document.querySelector('.msg');  
 const userList=document.querySelector('#users');
 
 
@@ -27,7 +36,7 @@ btn.addEventListener('mouseout',(e)=>{
         console.log(nameInput.value);
         console.log(emailInput.value);
 
-        if(nameInput.value==='' || emailInput.value===''){
+        if(nameInput.value==='' || emailInput.value===''){ 
             msg.classList.add('error');
             msg.innerHTML='please enter all the fields'; 
             setTimeout(()=>msg.remove(),3000);

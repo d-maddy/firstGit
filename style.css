@@ -12,11 +12,11 @@
   
   ul {
     list-style: none;
-  }
+  } 
   
   ul li {
     padding: 5px;
-    background: #f4f4f4; 
+    background: #f4f4f4;
     margin: 5px 0;
   }
   
@@ -25,7 +25,7 @@
     padding: 1rem;
     text-align: center;
   }
-
+  
   .container {
     margin: auto;
     width: 500px;
@@ -55,23 +55,23 @@
     width: 100%;
     padding: 10px 15px;
     border: 0;
-    background: #0fba3f;
+    background: #bb1717;
     color: #fff;
     border-radius: 5px;
     margin: 5px 0;
   }
   
   .btn:hover {
-    background: #80d1e8;
+    background: #444;
   }
   
   .bg-dark {
-    background: #aea6a6;
+    background: #8e8a8a;
     color: #322828;
   }
   
   .error {
-    background: rgb(255, 0, 0);
+    background: orangered;
     color: #fff;
     padding: 5px;
     margin: 5px;}
