@@ -13,28 +13,30 @@ const nameInput=document.querySelector('#name');
 const emailInput=document.querySelector('#email');
 const msg=document.querySelector('.msg');  
 const userList=document.querySelector('#users');
+const phNum=document.getElementById('phone');
 
 
 btn.addEventListener('mouseover',(e)=>{
 e.preventDefault();
 document.querySelector('body').classList.add('bg-dark');
 });
+
 btn.addEventListener('mouseout',(e)=>{
     e.preventDefault();
     document.querySelector('body').classList.add('bg-dark');
     });
-    myForn.addEventListener('submit',onsubmit);
 
-   
+    myForn.addEventListener('submit',onsubmit);
     function onsubmit(e){
         e.preventDefault();
 
         let obj={
             name:nameInput.value,
-            email:emailInput.value
+            email:emailInput.value,
+            phone:phNum.value
         }
         let user=JSON.stringify(obj);
-        localStorage.setItem("user", user);
+        localStorage.setItem(emailInput.value, user);
 
         let objN=JSON.parse(localStorage.getItem('user'));
        
@@ -55,9 +57,10 @@ btn.addEventListener('mouseout',(e)=>{
         }
         else{
             const li=document.createElement('li');
-            li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
+            li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value} :${phNum.value}`));
             userList.appendChild(li);
             nameInput.value='';
             emailInput.value='';
+            phNum.value='';
         }
     }
