@@ -61,6 +61,22 @@ function removeItem(e){
   }
 }
 
+// if(nameInput.value==='' || emailInput.value===''){ 
+//   msg.classList.add('error');
+//   msg.innerHTML='please enter all the fields'; 
+//   setTimeout(()=>msg.remove(),3000);
+// }
+// else{
+ 
+//   li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value} : ${phNum.value}`));
+//   userList.appendChild(li);
+
+//   nameInput.value='';
+//   emailInput.value='';
+//   phNum.value='';
+// }
+
+
 function filterItems(e){
   
   let text = e.target.value.toLowerCase();
