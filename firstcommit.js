@@ -1,10 +1,13 @@
 let form = document.getElementById('addForm');
 let itemList = document.getElementById('items');
+let filter= document.getElementById('filter')
 
 
 form.addEventListener('submit', addItem);
 
 itemList.addEventListener('click', removeItem);
+
+filter.addEventListener('keyup',filterItems);
 
 
 
@@ -14,13 +17,18 @@ function addItem(e){
 
   
   let newItem = document.getElementById('item').value;
+  
+  let description=document.getElementById('description').value
 
  
   let li = document.createElement('li');
-
   li.className = 'list-group-item';
- 
+
   li.appendChild(document.createTextNode(newItem));
+
+  li.appendChild(document.createTextNode(" "+description));
+
+
 
 
   let deleteBtn = document.createElement('button');
@@ -53,4 +61,20 @@ function removeItem(e){
   }
 }
 
+function filterItems(e){
+  
+  let text = e.target.value.toLowerCase();
+  let items = itemList.getElementsByTagName('li');
+
+  Array.from(items).forEach(function(item){
+    let itemName = item.firstChild.textContent;
+    let description=item.childNodes[1].textContent;
+
+    if(itemName.toLowerCase().indexOf(text) != -1 || description.toLocaleLowerCase().indexOf(text) !=-1){
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
 
