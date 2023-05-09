@@ -18,7 +18,7 @@ btn.addEventListener('mouseout',(e)=>{
 
     function onsubmit(e){
         e.preventDefault();
-
+        
         // localStorage.setItem('name',nameInput.value)
         // localStorage.setItem('email',emailInput.value)
         

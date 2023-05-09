@@ -16,7 +16,7 @@
   
   ul li {
     padding: 5px;
-    background: #f4f4f4;
+    background: #f4f4f4; 
     margin: 5px 0;
   }
   
@@ -25,7 +25,7 @@
     padding: 1rem;
     text-align: center;
   }
-  
+
   .container {
     margin: auto;
     width: 500px;
