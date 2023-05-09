@@ -25,16 +25,28 @@ btn.addEventListener('mouseout',(e)=>{
     });
     myForn.addEventListener('submit',onsubmit);
 
+   
     function onsubmit(e){
         e.preventDefault();
+
+        let obj={
+            name:nameInput.value,
+            email:emailInput.value
+        }
+        let user=JSON.stringify(obj);
+        localStorage.setItem("user", user);
+
+        let objN=JSON.parse(localStorage.getItem('user'));
+       
+        
 
         // localStorage.setItem('name',nameInput.value)
         // localStorage.setItem('email',emailInput.value)
         
-        localStorage.setItem(nameInput.value,emailInput.value);
+        // localStorage.setItem(nameInput.value,emailInput.value);
 
-        console.log(nameInput.value);
-        console.log(emailInput.value);
+        // console.log(nameInput.value);
+        // console.log(emailInput.value);
 
         if(nameInput.value==='' || emailInput.value===''){ 
             msg.classList.add('error');
