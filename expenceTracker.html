@@ -12,7 +12,6 @@
             padding: 15px;
             background-color: antiquewhite;
             width: 50%;
-
         }
         #add{
             background-color: greenyellow;
@@ -29,33 +28,19 @@
 <body>
     <h2>Expense tracker</h2>
     <form action="#" id="Eform">
-        <label for="amo">Choose Expenseamount :</label>
-            <select name="amount" id="exAmount">
-                <option value=""></option>
-                <option value="100">100</option>
-                <option value="200">200</option>
-                <option value="300">300</option>
-                <option value="400">400</option>
-            </select>
+        <label for="amo">Choose Expense Amount :</label>
+          <input type="number" id="exAmount" class="amount">
             <br>
             <br>
 
     
         <label for="des">Choose Description :</label>
-            <select name="Description" id="exDes">
-                <option value=""></option>
-
-                <option value="petrol">petrol</option>
-                <option value="vacatation">on vacatation</option>
-                <option value="sads">sads</option>
-                <option value="diesel">diesel</option>
-                <option value="movie">movie</option>
-            </select>
+        <input type="text"  id="exDes" class="Description">
             <br>
             <br>
 
         
-        <label for="cat">choose catagory :</label>
+        <label for="cat">Choose Catagory :</label>
             <select name="catagory" id="exCat">
                 <option value=""></option>
                 <option value="fule">fule</option>

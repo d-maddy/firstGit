@@ -16,7 +16,7 @@ form.addEventListener('submit',function(event){
         description:description,
         catagory:catagory
 
-    } 
+    }  
 
     let data=JSON.stringify(obj)
     localStorage.setItem(description,data)
