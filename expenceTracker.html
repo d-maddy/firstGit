@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        form{
+            margin: 20px;
+            padding: 15px;
+            background-color: antiquewhite;
+            width: 50%;
+
+        }
+        #add{
+            background-color: greenyellow;
+            width: 50%;
+            font-family: fantasy;
+        }
+        #eList{
+            background-color: aquamarine;
+            font-family: cursive;
+        }
+         
+    </style>
+</head>
+<body>
+    <h2>Expense tracker</h2>
+    <form action="#" id="Eform">
+        <label for="amo">Choose Expenseamount :</label>
+            <select name="amount" id="exAmount">
+                <option value=""></option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+                <option value="400">400</option>
+            </select>
+            <br>
+            <br>
+
+    
+        <label for="des">Choose Description :</label>
+            <select name="Description" id="exDes">
+                <option value=""></option>
+
+                <option value="petrol">petrol</option>
+                <option value="vacatation">on vacatation</option>
+                <option value="sads">sads</option>
+                <option value="diesel">diesel</option>
+                <option value="movie">movie</option>
+            </select>
+            <br>
+            <br>
+
+        
+        <label for="cat">choose catagory :</label>
+            <select name="catagory" id="exCat">
+                <option value=""></option>
+                <option value="fule">fule</option>
+                <option value="food">food</option>
+                <option value="electricity">electricity</option>
+                <option value="movie">movie</option>
+            </select><br>
+            <br>
+
+        
+        <input type="submit" id="add" value="Add expence">
+        <ul id="eList">
+        
+        </ul>
+    </form>
+    <script src="expence.js"></script>
+</body>
+</html>
