@@ -28,6 +28,20 @@ function showScreen(obj) {
   const editBtn = document.createElement("button");
   editBtn.className = "editbtn btn-sm float-right ";
   editBtn.appendChild(document.createTextNode("Edit"));
+  editBtn.onclick=()=>{
+    document.querySelector("#name").value=obj.name;
+    document.querySelector("#email").value=obj.email;
+    document.querySelector("#number").value=obj.number;
+
+    axios.delete(
+      "https://crudcrud.com/api/cd6daae67c7c45afb1e59a957fe98bf6/appointmentData/" +
+        obj._id
+    );
+    
+    userList.removeChild(li);
+  
+
+  }
 
   li.appendChild(dltBtn);
   li.appendChild(editBtn);
