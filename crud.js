@@ -5,24 +5,30 @@ const emailInput = document.querySelector("#email");
 const numberInput = document.querySelector("#number");
 const userList = document.querySelector("#users");
 
-btn.addEventListener("mouseover", (e) => {
-  e.preventDefault();
-  document.querySelector("body").classList.add("bg-dark");
-});
-btn.addEventListener("mouseout", (e) => {
-  e.preventDefault();
-  document.querySelector("body").classList.add("bg-dark");
-});
 myForn.addEventListener("submit", onsubmit);
 
-const li = document.createElement("li");
 function showScreen(obj) {
-    li.appendChild(document.createTextNode(JSON.stringify(obj)));
-    userList.appendChild(li);
-    nameInput.value = "";
-    emailInput.value = "";
-    numberInput.value = "";
-  }
+  const li = document.createElement("li");
+  li.appendChild(document.createTextNode(`${obj.name} :${obj.email} :${obj.number}`));
+  
+  const dltBtn=document.createElement('button')
+dltBtn.className='btn-sm float-right delete '
+dltBtn.appendChild(document.createTextNode('Delete'))
+
+
+const editBtn=document.createElement('button')
+editBtn.className='editbtn btn-sm float-right '
+editBtn.appendChild(document.createTextNode('Edit'))
+
+li.appendChild(dltBtn)
+li.appendChild(editBtn)
+
+userList.appendChild(li);
+
+  nameInput.value = "";
+  emailInput.value = "";
+  numberInput.value = "";
+}
 
 function onsubmit(e) {
   e.preventDefault();
@@ -47,12 +53,14 @@ function onsubmit(e) {
     });
 }
 
-
-
-axios
-  .get(
-    "https://crudcrud.com/api/e8aca2708b7b4901b7f49dc288eb261e/appointmentData"
-  )
-  .then((response) => {
-    showScreen(response.data);
-  });
+window.addEventListener("DOMContentLoaded", () => {
+  axios
+    .get(
+      "https://crudcrud.com/api/e8aca2708b7b4901b7f49dc288eb261e/appointmentData"
+    )
+    .then((response) => {
+      for (let i = 0; i < response.data.length; i++) {
+        showScreen(response.data[i]);
+      }
+    });
+});
