@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(245, 222, 255);
+}
+header{
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(209, 245, 255);
+    margin: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.container{
+    background-color: antiquewhite;
+    padding: 60px;
+    border-radius: 10px;
+}
+li{
+    padding: 5px;
+}
+
+#dn,#cd{
+    margin: 8px;
+   
+}
