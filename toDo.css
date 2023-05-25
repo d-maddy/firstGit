@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(245, 222, 255);
+}
+header{
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(209, 245, 255);
+    margin: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.container{
+    background-color: antiquewhite;
+    padding: 60px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+li{
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#dn{
+    margin: 8px;
+    background-color: rgb(133, 222, 0);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+#cd{
+    margin: 8px;
+    background-color: rgb(255, 34, 34);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+
