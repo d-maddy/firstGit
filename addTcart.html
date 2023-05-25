@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List</title>
+    <link rel="stylesheet" href="addTcart.css">
+</head>
+<body>
+    <header>
+        <h1>Add to cart..</h1>
+    </header>
+    <div id="container">
+        <form action="#" id="myForm">
+            <label for="product">Product Name:</label>
+            <input type="text" id="product" placeholder="enter item">
+            <label for="product">Product Amount:</label>
+            <input type="text" id="amount" placeholder="enter amount">
+            <input type="submit" value="Add" id="sub">
+        </form>
+        <div>
+            <h4>Products:</h4>
+            <ul id="list"></ul>
+        </div>
+        <hr>
+        <div>
+            <h4 id="total">Total value worth of products:<span id="totalAmount">0</span></h4>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="addTcart.js"></script>
+    
+</body>
+</html>
